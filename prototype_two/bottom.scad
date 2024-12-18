@@ -1,0 +1,71 @@
+MX_SWITCH_SIDE = 13.6;
+PADDING = 15;
+SWITCH_PADDING = 4;
+HEIGHT = PADDING+MX_SWITCH_SIDE+MX_SWITCH_SIDE+MX_SWITCH_SIDE+SWITCH_PADDING+SWITCH_PADDING;
+WIDTH = PADDING+MX_SWITCH_SIDE+MX_SWITCH_SIDE+MX_SWITCH_SIDE+SWITCH_PADDING+SWITCH_PADDING+MX_SWITCH_SIDE+SWITCH_PADDING;
+SCREW_R = 1.6;
+ALT_SCREW_R = 2;
+SCREW_PADDING = 4;
+
+linear_extrude(3){
+
+	difference(){
+
+
+		hull(){
+			square([WIDTH, HEIGHT]);
+			translate([-2-15-26,-2-10,0]){
+				square([26+4, 34+4]);
+			}
+		}
+
+		translate([SCREW_PADDING,SCREW_PADDING,0])
+			circle(r=SCREW_R);
+		translate([WIDTH-SCREW_PADDING,SCREW_PADDING,0])
+			circle(r=SCREW_R);
+		translate([WIDTH-SCREW_PADDING,HEIGHT-SCREW_PADDING,0])
+			circle(r=SCREW_R);
+		translate([SCREW_PADDING,HEIGHT-SCREW_PADDING,0])
+			circle(r=SCREW_R);
+
+		translate([SCREW_PADDING,(HEIGHT/2)+(MX_SWITCH_SIDE/2)+(SWITCH_PADDING/2),0])
+			circle(r=SCREW_R);
+		translate([WIDTH-SCREW_PADDING,(HEIGHT/2)+(MX_SWITCH_SIDE/2)+(SWITCH_PADDING/2),0])
+			circle(r=SCREW_R);
+		translate([SCREW_PADDING,(HEIGHT/2)-(MX_SWITCH_SIDE/2)-(SWITCH_PADDING/2),0])
+			circle(r=SCREW_R);
+		translate([WIDTH-SCREW_PADDING,(HEIGHT/2)-(MX_SWITCH_SIDE/2)-(SWITCH_PADDING/2),0])
+			circle(r=SCREW_R);
+
+		translate([(WIDTH/2)-MX_SWITCH_SIDE-SWITCH_PADDING,SCREW_PADDING,0])
+			circle(r=SCREW_R);
+		translate([(WIDTH/2)+MX_SWITCH_SIDE+SWITCH_PADDING,SCREW_PADDING,0])
+			circle(r=SCREW_R);
+		translate([(WIDTH/2),SCREW_PADDING,0])
+			circle(r=SCREW_R);
+
+		translate([(WIDTH/2)-MX_SWITCH_SIDE-SWITCH_PADDING,HEIGHT-SCREW_PADDING,0])
+			circle(r=SCREW_R);
+		translate([(WIDTH/2)+MX_SWITCH_SIDE+SWITCH_PADDING,HEIGHT-SCREW_PADDING,0])
+			circle(r=SCREW_R);
+		translate([(WIDTH/2),HEIGHT-SCREW_PADDING,0])
+			circle(r=SCREW_R);
+
+		translate([-15-26,-10,0]){
+			translate([ALT_SCREW_R+0.6,ALT_SCREW_R+0.8,0]){
+				circle(r=ALT_SCREW_R);
+			}
+			translate([26-ALT_SCREW_R-0.6-1.6,ALT_SCREW_R+0.8,0]){
+				circle(r=ALT_SCREW_R);
+			}
+			translate([ALT_SCREW_R+0.6,34-ALT_SCREW_R-2.5-1.5,0]){
+				circle(r=ALT_SCREW_R);
+			}
+			translate([26-ALT_SCREW_R-0.6-1.6,34-ALT_SCREW_R-2.5-1.5,0]){
+				circle(r=ALT_SCREW_R);
+			}
+		}
+
+	}
+
+}
