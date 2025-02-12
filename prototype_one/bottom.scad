@@ -19,7 +19,7 @@ difference(){
 		}
 	}
 
-	translate([4,4,0]){
+	#translate([4,4,0]){
 		circle(r=SCREW_R);
 	}
 	translate([SIDE+PADDING-4,4,0]){
@@ -31,7 +31,7 @@ difference(){
 	translate([SIDE+PADDING-4,SIDE+PADDING-4,0]){
 		circle(r=SCREW_R);
 	}
-	translate([4, (SIDE+PADDING)/2, 0]){
+	#translate([4, (SIDE+PADDING)/2, 0]){
 		circle(r=SCREW_R);
 	}
 	translate([SIDE+PADDING-4, (SIDE+PADDING)/2, 0]){
