@@ -27,4 +27,6 @@
     - Rs. 149 : Mild Steel - 1mm
     - Rs. 167 : Mild Steel - 2mm
     - Rs. 112 : ABS black - 2mm
+    - Rs. 122 : ABS black - 3mm (this is the one I will be ordering)
     - Rs. 104 : Transparent Acrylic - 2mm
+    - Rs. 263 : Stainless Steel 304 - 1mm
