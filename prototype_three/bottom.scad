@@ -9,21 +9,46 @@ WIDTH = SIDE + MX_GAP + MX_SIDE;
 MULTIPLIER = 0.5;
 JOYSTICK_Y = ((51.82+10) / 2)-4;
 
+module d1mini() {
+    color("#ffffff")
+    rotate([0,0,90])
+    translate([50,22,5])
+    #import("WEMOS-MINI-D1_ASM (Meshed).stl");
+}
+
+module pico(){
+    color("#ffffff")
+    translate([-120,100,-3])
+    import("rpi.stl");
+}
+
+// projection()
 difference(){
     
-    hull(){
-        minkowski(){
-            cube([WIDTH, SIDE, 1.4]);
-            cylinder(r=1, h=0.1);
-        }
-        minkowski(){
-            linear_extrude(1.4)
-            translate([-2-15-26,-2-10,0]){
-                square([26+4, 34+4]);
+    union(){
+        hull(){
+            minkowski(){
+                cube([WIDTH, SIDE, 1.4]);
+                cylinder(r=1, h=0.1);
             }
-            cylinder(r=1, h=0.1);
+            minkowski(){
+                linear_extrude(1.4)
+                translate([-2-15-26,-2-10,0]){
+                    square([26+4, 34+4]);
+                }
+                cylinder(r=1, h=0.1);
+            }
+            translate([-44,66.3,0])
+                cube([2,2,1.5]);
+                /* cylinder(r=1,h=1.5); */
         }
-    }
+        minkowski(){
+            translate([-43,68,0])
+                cube([10+10+20, 12, 1.5]);
+            cylinder(r=1,h=0.1);
+        }
+        
+    };
 
     // screw holes
     translate([PADDING*MULTIPLIER, PADDING*MULTIPLIER, 0])
@@ -44,19 +69,26 @@ difference(){
     translate([WIDTH/2, SIDE-(PADDING*MULTIPLIER), 0])
         cylinder(h = 5, r = SCREW_R);
 
-	translate([-15-26,-10,0]){
-		translate([SCREW_R+0.6,SCREW_R+0.8,0]){
+    translate([-15-26,-10,0]){
+        translate([SCREW_R+0.6,SCREW_R+0.8,0]){
             cylinder(h=3, r=SCREW_R);
-		}
-		translate([26-SCREW_R-0.6-1,SCREW_R+0.8,0]){
+        }
+        translate([26-SCREW_R-0.6-1,SCREW_R+0.8,0]){
             cylinder(h=3, r=SCREW_R);
-		}
-		translate([SCREW_R+0.6,SCREW_R+0.8+JOYSTICK_Y,0]){
+        }
+        translate([SCREW_R+0.6,SCREW_R+0.8+JOYSTICK_Y,0]){
             cylinder(h=3, r=SCREW_R);
-		}
-		translate([26-SCREW_R-0.6-1,SCREW_R+0.8+JOYSTICK_Y,0]){
+        }
+        translate([26-SCREW_R-0.6-1,SCREW_R+0.8+JOYSTICK_Y,0]){
             cylinder(h=3, r=SCREW_R);
-		}
-	}
-
+        }
+    }
+    /* d1mini(); */
+    #pico();
+    translate([-29.9,29.2,0])
+        color("#ffffff")
+            cylinder(r=1,h=2);
+    translate([-18.5,29.2,0])
+        color("#ffffff")
+            cylinder(r=1,h=2);
 };
