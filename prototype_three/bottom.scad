@@ -18,8 +18,19 @@ module d1mini() {
 
 module pico(){
     color("#ffffff")
-    translate([-120,100,-3])
+    translate([-128,100,-3])
     import("rpi.stl");
+}
+
+module pico_holes(){
+    translate([-29.9-8,29.2,0])
+            cylinder(r=1,h=2);
+    translate([-18.5-8,29.2,0])
+            cylinder(r=1,h=2);
+    translate([-29.9-8,76.2,0])
+            cylinder(r=1,h=2);
+    translate([-18.5-8,76.2,0])
+            cylinder(r=1,h=2);
 }
 
 // projection()
@@ -43,11 +54,25 @@ difference(){
                 /* cylinder(r=1,h=1.5); */
         }
         minkowski(){
-            translate([-43,68,0])
-                cube([10+10+20, 12, 1.5]);
-            cylinder(r=1,h=0.1);
+            translate([-43+1,68,0])
+                cube([10+10+1-1, 10, 1.4]);
+            cylinder(r=2,h=0.1);
         }
         
+        intersection(){
+
+            difference(){
+                translate([-18,70.3,0])
+                    translate([-2,-2,0])
+                    cube([4,4,1.5]);
+                translate([-18,70.3,0])
+                    cylinder(h=1.5,r=2);
+            };
+            translate([-2,-2,0])
+                translate([-18,70.3,0])
+                cylinder(h=1.5,r=2);
+        };
+
     };
 
     // screw holes
@@ -84,11 +109,6 @@ difference(){
         }
     }
     /* d1mini(); */
-    #pico();
-    translate([-29.9,29.2,0])
-        color("#ffffff")
-            cylinder(r=1,h=2);
-    translate([-18.5,29.2,0])
-        color("#ffffff")
-            cylinder(r=1,h=2);
+    /* #pico(); */
+    pico_holes();
 };
