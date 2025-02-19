@@ -30,3 +30,8 @@
     - Rs. 122 : ABS black - 3mm (this is the one I will be ordering)
     - Rs. 104 : Transparent Acrylic - 2mm
     - Rs. 263 : Stainless Steel 304 - 1mm
+> Note: I have switched the bottom plate a little bit so that a raspberry pi pico could be mounted on the bottom plate so, the price could be a bit skewed, just ~5/6rs
+
+### Final BOM
+- Bottom plate -> ABS (non metal laser cut) 3mm -> Rs. 129 + taxes = Rs. 178 (ordered)
+- Mount plate -> ABS (PLA 3d printed) -> Rs. 79 + taxes (not ordered yet)
