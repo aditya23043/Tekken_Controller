@@ -19,6 +19,8 @@
 
 ## Prototype 3
 - Switched from a 3x3 switch matrix to a 4x3 switch matrix
+- Added dedicated mounting holes for the microcontroller
+- Corrected the positioning of the analog joystick and the gap between adjacent MX switches
 
 ### Order
 - Switch Mount plate : Rs. 74 (PLA - black)
