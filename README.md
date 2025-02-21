@@ -34,4 +34,7 @@
 
 ### Final BOM
 - Bottom plate -> ABS (non metal laser cut) 3mm -> Rs. 129 + taxes = Rs. 178 (ordered)
-- Mount plate -> ABS (PLA 3d printed) -> Rs. 79 + taxes (not ordered yet)
+- Mount plate -> ABS (PLA 3d printed) -> Rs. 79 + taxes (ordered alongside the single case for -> https://github.com/aditya23043/split36)
+
+<img src="./prototype_three/imgs/2025-02-21_11-39.png">
+<img src="./prototype_three/imgs/2025-02-21_11-39_1.png">
