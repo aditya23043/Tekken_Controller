@@ -54,4 +54,6 @@
 <img src="./prototype_three/imgs/WhatsApp Image 2025-02-26 at 21.02.61.jpeg">
 <img src="./prototype_three/imgs/WhatsApp Image 2025-02-26 at 21.02.62.jpeg">
 
-- Since my two of my mid semester exams are still remaining (PSD and F&W), I will be waiting for them to get over before beginning with the firmware
+> Note that you only see 10 out of the 12 switches attached because I only had these 10 switches laying around from my HMX hyacinth V2U collection. The rest 20 were placed in the [20 Key Split Keyboard](https://github.com/aditya23043/split_keyboard) out of the 30 I had ordered
+
+- Since two of my mid semester exams are still remaining (PSD and F&W), I will be waiting for them to get over before beginning with the firmware
