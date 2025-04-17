@@ -57,3 +57,8 @@
 > Note that you only see 10 out of the 12 switches attached because I only had these 10 switches laying around from my HMX hyacinth V2U collection. The rest 20 were placed in the [20 Key Split Keyboard](https://github.com/aditya23043/split_keyboard) out of the 30 I had ordered
 
 - Since two of my mid semester exams are still remaining (PSD and F&W), I will be waiting for them to get over before beginning with the firmware
+
+### 2025-04-18 00:16
+- Wiring and all of the hardware part completed
+- Firmware development begins from tomorrow
+- [ ] Todo: I would like to add some kind of combination of keys to switch to different keymaps corresponding to different gammes
