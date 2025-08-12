@@ -1,9 +1,6 @@
 #define MATRIX_ROWS 3
 #define MATRIX_COLS 4
 
-// #define DIRECT_PINS                                                         \
-//     {                                                                       \
-//         {"GP28", "GP17", "GP16", "GP9"}, {"GP22", "GP6", "GP19", "GP21"}, { \
-//             "GP7", "GP18", "GP20", "GP8"                                    \
-//         }                                                                   \
-//     }
+#define ANALOG_JOYSTICK_X_AXIS_PIN 27
+#define ANALOG_JOYSTICK_Y_AXIS_PIN 26
+#define ANALOG_JOYSTICK_CLICK_PIN 14
